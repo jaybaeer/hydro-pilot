@@ -86,8 +86,8 @@ interface UserProfilesProps extends HydrogenComponentProps {}
 
 const UserProfiles = forwardRef<HTMLDivElement, UserProfilesProps>((props, ref) => {
   return (
-    <div ref={ref} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
-      <UserCard />
+    <div ref={ref} className="p-4">
+  <UserCard />
     </div>
   );
 });
