@@ -2,40 +2,112 @@ import React, { forwardRef } from 'react';
 
 const UserCard = () => {
   return (
-    <div
-      className="border bg-card text-card-foreground rounded-lg overflow-hidden shadow-lg max-w-sm mx-auto hover:shadow-xl transition-all duration-200"
-      data-v0-t="card"
+<div
+  className="container-hero-desktop"
+  data-v0-t="container-hero-desktop"
+    style={{
+      position: 'absolute',
+      left: '75%',
+      top: '62.5%',
+      transform: 'translate(-50%, -50%)',
+      width: '120px',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      textAlign: 'center',
+      height: '40px',
+      padding: '0px',
+      backgroundColor: 'transparent',
+      borderBottom: '1px solid grey',
+      borderRadius: '0px',
+      textDecoration: 'none',
+      fontSize: '15px',
+      color: 'green',
+      fontWeight: '500',
+      cursor: 'pointer',
+    }}
     >
-      <img
-        alt="Profile picture"
-        className="object-cover w-full"
-        height="320"
-        src="https://cdn.shopify.com/s/files/1/0728/0410/6547/files/medium_3.webp?v=1702346343"
-        style={{ aspectRatio: '1 / 1', objectFit: 'cover' }}
-        width="320"
-      />
-      <div className="p-4">
-        <h2 className="text-2xl font-bold hover:text-gray-700 transition-all duration-200">
-          Emily Johnson
-        </h2>
-        <h3 className="text-gray-500 hover:text-gray-600 transition-all duration-200">
-          Front-end Developer
-        </h3>
-        <p className="mt-2 text-gray-600 hover:text-gray-700 transition-all duration-200">
-          Passionate about creating interactive user interfaces.
-        </p>
-        <div className="flex mt-4 space-x-2">
-          <button className="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground h-9 rounded-md px-3 w-full hover:bg-gray-700 hover:text-white transition-all duration-200">
-            Follow
-          </button>
-          <button className="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent h-9 rounded-md px-3 w-full hover:border-gray-700 hover:text-gray-700 transition-all duration-200">
-            Message
-          </button>
-        </div>
-      </div>
-    </div>
+  <a className="desktop-hero-section-title">
+    <span> Unity Collection</span>
+  </a>
+  <a href="/collections/unity">
+    <img
+      alt="Profile picture"
+      className="object-cover w-full"
+      src="https://cdn.shopify.com/s/files/1/0654/5358/8719/files/3400X1326-Cover-WEB-4.avif?v=1727778974"
+      style={{ width: '100%' height: '40px' }}
+    />
+  </a>
+  <button
+    className="hero-link-btn"
+    href="/collections/unity"
+    style={{
+      position: 'absolute',
+      left: '75%',
+      top: '62.5%',
+      transform: 'translate(-50%, -50%)',
+      width: '120px',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      textAlign: 'center',
+      height: '40px',
+      padding: '0px',
+      backgroundColor: 'transparent',
+      borderBottom: '1px solid grey',
+      borderRadius: '0px',
+      textDecoration: 'none',
+      fontSize: '15px',
+      color: 'red',
+      fontWeight: '500',
+      cursor: 'pointer',
+    }}
+  >
+    Shop Now
+  </button>
+</div>
+
+import React, { useState } from 'react';
+
+const HoverButton = () => {
+  const [isHovered, setIsHovered] = useState(false);
+
+  return (
+    <button
+      className="hero-link-btn"
+      style={{
+        position: 'absolute',
+        left: '75%',
+        top: '62.5%',
+        transform: 'translate(-50%, -50%)',
+        width: '120px',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        textAlign: 'center',
+        height: '40px',
+        padding: '0px',
+        backgroundColor: 'transparent',
+        borderBottom: '1px solid grey',
+        borderRadius: '0px',
+        textDecoration: 'none',
+        fontSize: '15px',
+        color: isHovered ? 'darkred' : 'red', // Change color on hover
+        fontWeight: '500',
+        cursor: 'pointer',
+        transition: 'color 0.2s ease', // Smooth transition for color change
+      }}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      Shop Now
+    </button>
   );
 };
+
+export default HoverButton;
+
+
 
 interface UserProfilesProps extends HydrogenComponentProps {}
 
@@ -56,3 +128,6 @@ export const schema: HydrogenComponentSchema = {
   type: 'user-profiles',
   inspector: [],
 };
+
+
+
