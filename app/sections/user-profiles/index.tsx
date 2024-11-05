@@ -35,7 +35,6 @@ const UserCard = () => {
       alt="Profile picture"
       className="object-cover w-full"
       src="https://cdn.shopify.com/s/files/1/0654/5358/8719/files/3400X1326-Cover-WEB-4.avif?v=1727778974"
-      style={{ width: '100%' height: '40px' }}
     />
   </a>
   <button
@@ -128,6 +127,3 @@ export const schema: HydrogenComponentSchema = {
   type: 'user-profiles',
   inspector: [],
 };
-
-
-
