@@ -6,25 +6,12 @@ const UserCard = () => {
       className="container-hero-desktop"
       data-v0-t="container-hero-desktop"
       style={{
-        position: 'absolute',
-        left: '75%',
-        top: '62.5%',
-        transform: 'translate(-50%, -50%)',
-        width: '120px',
+        width: '100%',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
         textAlign: 'center',
-        height: '40px',
         padding: '0px',
-        backgroundColor: 'transparent',
-        borderBottom: '1px solid grey',
-        borderRadius: '0px',
-        textDecoration: 'none',
-        fontSize: '15px',
-        color: 'green',
-        fontWeight: '500',
-        cursor: 'pointer',
       }}
     >
       <a className="desktop-hero-section-title">
