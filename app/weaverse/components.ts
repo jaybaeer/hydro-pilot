@@ -54,7 +54,7 @@ import * as VideoEmbed from "~/sections/video-embed";
 import * as VideoEmbedItem from "~/sections/video-embed/video";
 import * as JudgemeReview from "~/sections/judgeme-reviews";
 import * as ReviewIndex from "~/sections/judgeme-reviews/review-index";
-
+import * as UserProfiles from '~/sections/user-profiles'
 
 export let components: HydrogenComponent[] = [
   SubHeading,
@@ -115,4 +115,5 @@ export let components: HydrogenComponent[] = [
   SlideShowSlide,
   ProductList,
   Spacer,
+  UserProfiles,
 ];
