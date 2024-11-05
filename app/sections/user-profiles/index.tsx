@@ -1,3 +1,5 @@
+import React, { forwardRef } from 'react';
+
 const UserCard = () => {
   return (
     <div
@@ -9,7 +11,7 @@ const UserCard = () => {
         className="object-cover w-full"
         height="320"
         src="https://cdn.shopify.com/s/files/1/0728/0410/6547/files/medium_3.webp?v=1702346343"
-        style={{ aspectRatio: '320/320', objectFit: 'cover' }}
+        style={{ aspectRatio: '1 / 1', objectFit: 'cover' }}
         width="320"
       />
       <div className="p-4">
@@ -32,9 +34,25 @@ const UserCard = () => {
         </div>
       </div>
     </div>
-  )
-}
-interface UserProfilesProps extends HydrogenComponentProps {}const UserProfiles = forwardRef<HTMLDivElement, UserProfilesProps>(  (props, ref) => {    return (      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-4">        <UserCard />      </div>    )  },)
-export default UserProfiles
+  );
+};
 
-export const schema: HydrogenComponentSchema = {  title: 'User Profiles',  type: 'user-profiles',  inspector: [],}
+interface UserProfilesProps extends HydrogenComponentProps {}
+
+const UserProfiles = forwardRef<HTMLDivElement, UserProfilesProps>((props, ref) => {
+  return (
+    <div ref={ref} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
+      <UserCard />
+    </div>
+  );
+});
+
+UserProfiles.displayName = 'UserProfiles';
+
+export default UserProfiles;
+
+export const schema: HydrogenComponentSchema = {
+  title: 'User Profiles',
+  type: 'user-profiles',
+  inspector: [],
+};
