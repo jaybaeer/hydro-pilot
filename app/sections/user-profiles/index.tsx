@@ -6,6 +6,7 @@ const UserCard = () => {
       className="container-hero-desktop"
       data-v0-t="container-hero-desktop"
       style={{
+        position: 'relative', // Make the container relative
         width: '100%',
         display: 'flex',
         alignItems: 'center',
@@ -14,42 +15,44 @@ const UserCard = () => {
         padding: '0px',
       }}
     >
-      <a className="desktop-hero-section-title">
-        <span>Unity Collection</span>
-      </a>
-      <a href="/collections/unity">
+      <a href="/collections/unity" style={{ width: '100%' }}>
         <img
-          alt="Profile picture"
+          alt="Unity Collection"
           className="object-cover w-full"
           src="https://cdn.shopify.com/s/files/1/0654/5358/8719/files/3400X1326-Cover-WEB-4.avif?v=1727778974"
+          style={{ width: '100%', height: 'auto', display: 'block' }} // Ensure the image is responsive
         />
       </a>
-      <button
-        className="hero-link-btn"
+      <div
         style={{
           position: 'absolute',
-          left: '75%',
-          top: '62.5%',
-          transform: 'translate(-50%, -50%)',
-          width: '120px',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
+          bottom: '20px', // Place near the bottom of the image
+          width: '100%',
           textAlign: 'center',
-          height: '40px',
-          padding: '0px',
-          backgroundColor: 'transparent',
-          borderBottom: '1px solid grey',
-          borderRadius: '0px',
-          textDecoration: 'none',
-          fontSize: '15px',
-          color: 'red',
-          fontWeight: '500',
-          cursor: 'pointer',
+          color: 'white',
         }}
       >
-        Shop Now
-      </button>
+        <a className="desktop-hero-section-title" style={{ fontSize: '20px', fontWeight: 'bold' }}>
+          Unity Collection
+        </a>
+        <br />
+        <button
+          className="hero-link-btn"
+          style={{
+            marginTop: '8px',
+            padding: '10px 20px',
+            backgroundColor: 'red',
+            color: 'white',
+            fontSize: '15px',
+            fontWeight: '500',
+            border: 'none',
+            cursor: 'pointer',
+            borderRadius: '4px',
+          }}
+        >
+          Shop Now
+        </button>
+      </div>
     </div>
   );
 };
@@ -61,26 +64,15 @@ const HoverButton = () => {
     <button
       className="hero-link-btn"
       style={{
-        position: 'absolute',
-        left: '75%',
-        top: '62.5%',
-        transform: 'translate(-50%, -50%)',
-        width: '120px',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        textAlign: 'center',
-        height: '40px',
-        padding: '0px',
-        backgroundColor: 'transparent',
-        borderBottom: '1px solid grey',
-        borderRadius: '0px',
-        textDecoration: 'none',
+        padding: '10px 20px',
+        backgroundColor: isHovered ? 'darkred' : 'red',
+        color: 'white',
         fontSize: '15px',
-        color: isHovered ? 'darkred' : 'red', // Change color on hover
         fontWeight: '500',
+        border: 'none',
         cursor: 'pointer',
-        transition: 'color 0.2s ease', // Smooth transition for color change
+        borderRadius: '4px',
+        transition: 'background-color 0.2s ease',
       }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
