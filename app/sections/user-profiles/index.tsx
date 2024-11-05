@@ -20,16 +20,18 @@ const UserCard = () => {
           alt="Unity Collection"
           className="object-cover w-full"
           src="https://cdn.shopify.com/s/files/1/0654/5358/8719/files/3400X1326-Cover-WEB-4.avif?v=1727778974"
-          style={{ width: '100%', height: '100%', display: 'flex' }} 
+          style={{ width: '100%', height: 'auto', display: 'flex' }} 
         />
       </a>
       <div
         style={{
           position: 'absolute',
-          bottom: '20px', // Place near the bottom of the image
+          bottom: '20px', 
           width: '100%',
           textAlign: 'center',
-          color: 'white',
+          color: '#383838',
+          fontSize: '18px',
+          fontWeight: '500'
         }}
       >
         <a className="desktop-hero-section-title" style={{ fontSize: '20px', fontWeight: 'bold' }}>
@@ -45,7 +47,6 @@ const UserCard = () => {
             color: '#383838',
             fontSize: '14px',
             fontWeight: '400',
-            border: 'none',
             cursor: 'pointer',
             borderRadius: '0px',
             borderBorrom: 'solid 1px #383838'
