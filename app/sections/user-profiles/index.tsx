@@ -41,13 +41,14 @@ const UserCard = () => {
           style={{
             marginTop: '8px',
             padding: '10px 20px',
-            backgroundColor: 'red',
-            color: 'white',
-            fontSize: '15px',
-            fontWeight: '500',
+            backgroundColor: 'transparent',
+            color: '#383838',
+            fontSize: '14px',
+            fontWeight: '400',
             border: 'none',
             cursor: 'pointer',
-            borderRadius: '4px',
+            borderRadius: '0px',
+            borderBorrom: 'solid 1px #383838'
           }}
         >
           Shop Now
